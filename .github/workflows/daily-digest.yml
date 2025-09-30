@@ -1,0 +1,42 @@
+name: RSS Daily Digest
+
+on:
+  schedule:
+    # Runs every day at 8:00 AM UTC (adjust timezone as needed)
+    # Format: minute hour day month weekday
+    - cron: '0 8 * * *'
+
+  # Allows manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Run RSS Digest
+        env:
+          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          CRON_SCHEDULE: ${{ secrets.CRON_SCHEDULE }}
+          HOURS_LOOKBACK: ${{ secrets.HOURS_LOOKBACK }}
+        run: node dist/index.js --test

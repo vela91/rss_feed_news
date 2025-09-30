@@ -1,0 +1,33 @@
+{
+  "name": "rss-daily-digest",
+  "version": "1.0.0",
+  "description": "Daily RSS digest for web development news",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test-fetch": "ts-node src/index.ts --test"
+  },
+  "keywords": [
+    "rss",
+    "digest",
+    "webdev",
+    "newsletter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "nodemailer": "^6.9.7",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/nodemailer": "^6.4.14",
+    "@types/node-cron": "^3.0.11",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}

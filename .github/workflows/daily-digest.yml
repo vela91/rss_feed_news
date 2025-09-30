@@ -2,9 +2,10 @@ name: RSS Daily Digest
 
 on:
   schedule:
-    # Runs every day at 8:00 AM UTC (adjust timezone as needed)
+    # Runs every day at 7:00 AM Spain time (CEST/UTC+2)
+    # 5:00 AM UTC = 7:00 AM Spain (summer), 6:00 AM Spain (winter)
     # Format: minute hour day month weekday
-    - cron: '0 8 * * *'
+    - cron: '0 5 * * *'
 
   # Allows manual triggering from GitHub Actions tab
   workflow_dispatch:

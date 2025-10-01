@@ -62,6 +62,94 @@ export const RSS_FEEDS: RSSFeed[] = [
     name: 'Reddit r/webdev',
     url: 'https://www.reddit.com/r/webdev/.rss',
     category: 'Communities'
+  },
+
+  // AI & Machine Learning
+  {
+    name: 'OpenAI Blog',
+    url: 'https://openai.com/blog/rss.xml',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'Google AI Blog',
+    url: 'https://blog.research.google/feeds/posts/default',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'Hugging Face Blog',
+    url: 'https://huggingface.co/blog/feed.xml',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'Towards Data Science - AI',
+    url: 'https://towardsdatascience.com/feed/tagged/artificial-intelligence',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'AI Weekly',
+    url: 'https://aiweekly.co/rss/',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'The Batch (Andrew Ng)',
+    url: 'https://www.deeplearning.ai/the-batch/feed/',
+    category: 'AI & Machine Learning'
+  },
+
+  // Python & AI Development
+  {
+    name: 'Real Python',
+    url: 'https://realpython.com/atom.xml',
+    category: 'Python & AI Dev'
+  },
+  {
+    name: 'Python Weekly',
+    url: 'https://www.pythonweekly.com/rss/',
+    category: 'Python & AI Dev'
+  },
+  {
+    name: 'Dev.to - AI',
+    url: 'https://dev.to/feed/tag/ai',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'Dev.to - Machine Learning',
+    url: 'https://dev.to/feed/tag/machinelearning',
+    category: 'AI & Machine Learning'
+  },
+
+  // LLMs, RAG & AI Agents
+  {
+    name: 'LangChain Blog',
+    url: 'https://blog.langchain.dev/rss/',
+    category: 'LLMs & AI Agents'
+  },
+  {
+    name: 'Reddit r/LangChain',
+    url: 'https://www.reddit.com/r/LangChain/.rss',
+    category: 'LLMs & AI Agents'
+  },
+  {
+    name: 'Reddit r/MachineLearning',
+    url: 'https://www.reddit.com/r/MachineLearning/.rss',
+    category: 'AI & Machine Learning'
+  },
+  {
+    name: 'Reddit r/LocalLLaMA',
+    url: 'https://www.reddit.com/r/LocalLLaMA/.rss',
+    category: 'LLMs & AI Agents'
+  },
+
+  // Automation
+  {
+    name: 'Zapier Blog',
+    url: 'https://zapier.com/blog/feed/',
+    category: 'Automation'
+  },
+  {
+    name: 'n8n Blog',
+    url: 'https://blog.n8n.io/rss/',
+    category: 'Automation'
   }
 ];
 
